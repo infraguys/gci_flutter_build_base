@@ -34,7 +34,10 @@ USER="ubuntu"
 [[ "$EUID" == 0 ]] || exec sudo -s "$0" "$@"
 
 apt update
-apt install -y jq zip \
+apt install -y jq zip cmake clang \
+    libgtk-3-dev ninja-build libsecret-1-dev libsecret-1-0 libjsoncpp-dev \
+    libgstreamer1.0-dev libgstreamer-plugins-bad1.0-dev libgstreamer-plugins-base1.0-dev \
+    libgstreamer-plugins-good1.0-dev gstreamer1.0-libav \
     libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64 # for Android
 
 # Install FVM
